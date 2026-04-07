@@ -11,7 +11,7 @@ library(tibble)
 # =========================
 # 1) File paths
 # =========================
-input_csv  <- "../paper_sampling/data/papers_coded.csv"
+input_csv  <- "../study_fetch_sampling/data/papers_coded.csv"
 output_json <- "../papers.json"
 ```
 
