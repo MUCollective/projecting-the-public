@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projecting the Public</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tabulator-tables@6.4.0/dist/css/tabulator.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="quicksand-600">
+  <main class="container">
+    <section class="hero">
+      <h1>Projecting the Public</h1>
+      <p class="subtitle">
+        A list of empirical visualization studies of broader audiences, selected and coded for
+        our paper <i>Projecting the Public: A Framework for Constructing Empirical Visualization Studies
+          of Broader Audiences</i>. To look at the studies and filter by our codes, keep scrolling. To read
+        about our methods and code definitions, check out the <a href="./methods.html">methods page</a>.
+      </p>
+
+      <div class="field" style="margin-top: 14px;">
+        <a href="./methods.html">
+          <button class="quicksand-600">Read methods + definitions</button>
+        </a>
+      </div>
+      
+      <div class="image-row">
+        <img src="images/audience.png" alt="Image 1">
+        <img src="images/setting.png" alt="Image 2">
+        <img src="images/impression.png" alt="Image 3">
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <div class="card-header">
+          <h2>Publications</h2>
+          <p class="section-note">
+            Filter by any combination of codes, and search by title, authors, year, venue, or DOI.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="controls grouped-controls">
+            <div class="field field-wide">
+              <label for="keywordInput">Keyword search</label>
+              <input id="keywordInput" class="quicksand-600" type="text"
+                placeholder="Try: museum, public, dashboard..." />
+            </div>
+
+            <div id="groupedFilters" class="grouped-filters"></div>
+
+            <div class="field action-row">
+              <button id="resetFilters" class="quicksand-600" type="button">Reset filters</button>
+            </div>
+          </div>
+
+          <div class="meta-row">
+            <div class="pill"><span id="rowCount">0</span> papers shown</div>
+            <div class="field">
+              <button id="downloadCSV" class="quicksand-600">Download filtered CSV</button>
+            </div>
+          </div>
+
+
+          <div id="papers-table"></div>
+
+          <!-- <p class="help">
+            Expected data file: <code>papers.json</code>. Each row should include fields like
+            <code>title</code>, <code>authors</code>, <code>year</code>, <code>venue</code>, <code>doi</code>,
+            <code>abstract</code>, and one or more tag columns where each tag column is an array, such as
+            <code>specified_audience</code>, <code>role</code>, <code>evaluation_environment</code>, and
+            <code>evaluation_measures</code>.
+          </p> -->
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-header">
+          <h2>Sankey Diagram</h2>
+          <p class="section-note">
+            You can either embed an interactive HTML exported from R or show a static PNG/SVG.
+          </p>
+        </div>
+        <div class="card-body sankey-wrap">
+          <!-- Option A: embed an interactive Sankey exported from R -->
+          <!-- Uncomment this iframe if you export sankey.html from R -->
+          <!-- <iframe class="sankey-frame" src="./sankey.html" title="Sankey diagram"></iframe> -->
+
+          <!-- Option B: static image fallback -->
+          <img class="sankey-image" src="./sankey.png" alt="Sankey diagram for the coded paper corpus" />
+        </div>
+      </section>
+    </div>
+
+    <p class="footer">
+      Hosted with GitHub Pages.
+    </p>
+  </main>
+
+  <script src="https://unpkg.com/tabulator-tables@6.4.0/dist/js/tabulator.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

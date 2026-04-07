@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projecting the Public — Methods</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tabulator-tables@6.4.0/dist/css/tabulator.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="quicksand-600">
+  <main class="container">
+    <section class="hero">
+      <h1>Projecting the Public</h1>
+      <p class="subtitle">
+        This page describes the methods, coding process, and code definitions used for
+        <i>Projecting the Public: A Framework for Constructing Empirical Visualization Studies
+          of Broader Audiences</i>. To browse the coded papers and filter the corpus, return to the main page.
+      </p>
+
+      <div class="field" style="margin-top: 14px;">
+        <a href="./index.html">
+          <button class="quicksand-600" type="button">Back to main page</button>
+        </a>
+      </div>
+
+      <div class="image-row">
+        <img src="images/audience.png" alt="Audience illustration">
+        <img src="images/setting.png" alt="Setting illustration">
+        <img src="images/impression.png" alt="Impression illustration">
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <div class="card-header">
+          <h2>Methods</h2>
+          <p class="section-note">
+            Overview of corpus construction, inclusion criteria, and coding approach.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="prose">
+            <h3>Corpus construction</h3>
+            <p>
+                We limited our search to four premier visualization venues: IEEE VIS, IEEE Transactions on 
+                Visualization and Computer Graphics (TVCG), Computer Graphics Forum (CGF), and visualization-related 
+                papers from the ACM CHI conference on Human Factors in Computing. Any publication that was published 
+                or appeared in these venues from 2020 to 2025 was considered.
+
+                For VIS and TVCG, we only considered publications from 2020 to 2024 because our source <a href="https://www.vispubdata.org/home">Vispubdata</a> did not have 2025 works as of download on November 18, 2025. 
+            </p>
+
+            <h3>Selection process</h3>
+            <p>
+              To filter studies, we compiled a list of keywords starting from topics on the website Our World in Data, 
+              which archives visualizations and data related to societal, global issues—a rough proxy for public-facing visualizations. 
+              We then added words like "open data", "public", "museum", and "news media", as well as words 
+              describing general audiences like "casual user", "general public", or "non-expert", expanding on the search criteria used by 
+              <a href="https://dl.acm.org/doi/10.1145/3544548.3581524">Burns et al. (2023)</a>. We filtered for the presence of at least one of these 
+              keywords in the abstract, title, or paper-related keywords (as well as the word "visualization" for papers in CGF and CHI). 
+              Publications with the keyword "virtual reality", "augmented reality", "vr", or "ar" were excluded, as we were not 
+              interested in those settings.
+            </p>
+            <p>
+                Querying using just keyword criteria, we initially received 330 papers. The first two authors then independently 
+                conducted rounds of manual filtering to pick studies that satisfied additional criteria: 
+                <ul>
+                    <li>Studies had to concern the impact of a visual or data representation on general audiences and have a means 
+                        of eliciting responses from participants, inspired by <a href="https://ieeexplore.ieee.org/document/8457476/">Hullman et al. (2019)</a>.</li>
+                
+                    <li>We were interested in visualizations intended to visually communicate meaning versus evaluating skills, 
+                        and thus excluded studies of visualization literacy testing. 
+                
+                    <li>Additionally, we excluded studies solely focused on tools or processes for visualization construction 
+                        visualization (though this should be examined in future research).</li>
+                </ul>
+            </p>
+
+            <h3>Coding procedure</h3>
+            <p>
+              Inspired by <a href="https://link.springer.com/10.1007/s41233-023-00059-2">Subramanian et al.’s</a> systematic review of ecological validity guidelines, we coded the final 73 papers to 
+              understand the landscape of motivations and methods used, and to guide sampling for interviews.
+              We coded each study with its methods and measures for the evaluation process and setting for experimental deployment, 
+              as well as the visualization's specified audience and role (as a communicative medium, analytic tool, etc.).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Code Definitions</h2>
+          <p class="section-note">
+            Definitions for the codes used in the filterable table and Sankey diagram.
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="prose">
+            <h3>Specified audience</h3>
+            <ul>
+              <li><strong>General audience</strong> — Participants represent members of the general public, with varied or unknown data literacy.</li>
+              <li><strong>Specific publics/lived communities</strong> — Participants are publics defined by shared lived experiences or accessibility needs (e.g., screen reader users, disability communities, local or geographically bounded residents, advocacy groups).</li>
+            </ul>
+
+            <h3>Specified role of visualization</h3>
+            <ul>
+              <li><strong>Affective/reflective medium</strong> — Visualization is designed to evoke emotion, empathy, reflection, or attitudinal change—used for awareness-raising, social impact, or affective engagement.</li>
+              <li><strong>Analytic/reasoning tool</strong> — Visualization serves as a tool for supporting reasoning, decision-making, or analysis. Focus on usability, insight generation, workflow, or cognitive support.</li>
+              <li><strong>Communicative/explanatory medium</strong> — Visualization functions as a medium for communicating insights or narratives—explaining findings or supporting presentations.</li>
+              <li><strong>Learning tool</strong> — Visualization supports learning and education. Focus on comprehension, retention, or skill development.</li>
+              <li><strong>Perceptual/cognitive object</strong> — Visualization is treated as an object of perception—the study isolates visual encodings or perceptual judgments (e.g., accuracy, bias, ranking).</li>
+              <li><strong>Social/collaborative medium</strong> — Visualization facilitates social interaction and collaborative activity.</li>
+            </ul>
+
+            <h3>Evaluation setting</h3>
+            <ul>
+              <li><strong>Controlled laboratory study</strong> — Evaluation data are collected in a controlled lab or lab-like environment, with tightly specified tasks, stimuli, and conditions. Can be conducted remotely but maintains experimental control via online platforms.</li>
+              <li><strong>Embedded in personal routines</strong> — Evaluation data are collected as the visualization is integrated into individuals’ everyday personal routines or habits.</li>
+              <li><strong>Embedded in real workflows</strong> — Evaluation data are collected while the visualization is used within an existing professional, institutional, or civic workflow.</li>
+              <li><strong>In-the-wild/naturalistic public deployment</strong> — Evaluation occurs in real-world settings where participants encounter the visualization as part of everyday activity. Participants may encounter the visualization opportunistically in public or semi-public spaces.</li>
+              <li><strong>Simulated scenario/workflow</strong> — Evaluation uses a simulated scenario that mimics real-world context, stakes, or timelines without being a full deployment.</li>
+            </ul>
+
+            <h3>Evaluation measures</h3>
+            <ul>
+              <li><strong>Diary entries/experience sampling</strong></li>
+              <li><strong>Free exploration/think-aloud</strong></li>
+              <li><strong>Interaction log/trace data</strong></li>
+              <li><strong>Interviews</strong></li>
+              <li><strong>Observation/ethnographic methods</strong></li>
+              <li><strong>Participant artifact production</strong></li>
+              <li><strong>Physiological/behavioral sensing</strong></li>
+              <li><strong>Surveys/questionnaires</strong></li>
+              <li><strong>Task performance measures</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <p class="footer">
+      Hosted with GitHub Pages.
+    </p>
+  </main>
+</body>
+
+</html>
