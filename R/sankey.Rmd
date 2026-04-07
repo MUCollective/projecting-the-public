@@ -1,0 +1,241 @@
+---
+title: "Untitled"
+output: html_document
+date: "2026-03-31"
+---
+
+```{r setup, include=FALSE}
+packages <- c("rlang", "ggplot2", "ggalluvial", "dplyr", "networkD3", "htmlwidgets")
+
+to_install <- packages[!sapply(packages, requireNamespace, quietly = TRUE)]
+
+if (length(to_install) > 0) {
+  install.packages(to_install)
+}
+```
+
+```{r}
+library(ggplot2)
+library(ggalluvial)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(networkD3)
+library(htmlwidgets)
+
+input_csv  <- "../study_fetch_sampling/data/papers_coded.csv"
+```
+
+```{r}
+df <- read.csv(input_csv, stringsAsFactors = FALSE)
+```
+
+```{r}
+counts <- df %>%
+  summarise(
+    specified.audience = list(count(., specified.audience, sort = TRUE))
+  )
+
+counts$specified.audience[[1]]
+```
+
+```{r}
+counts <- df %>%
+  separate_rows(specified.role.of.visualization, sep = "\\r?\\n") %>%
+  summarise(
+    specified.role.of.visualization = list(count(., specified.role.of.visualization, sort = TRUE))
+  )
+
+counts$specified.role.of.visualization[[1]]
+```
+
+```{r}
+counts <- df %>%
+  separate_rows(evaluation.setting, sep = "\\r?\\n") %>%
+  summarise(
+    evaluation.setting = list(count(., evaluation.setting, sort = TRUE))
+  )
+
+counts$evaluation.setting[[1]]
+```
+
+```{r}
+counts <- df %>%
+  separate_rows(evaluation.measures, sep = "\\r?\\n") %>%
+  summarise(
+    evaluation.measures = list(count(., evaluation.measures, sort = TRUE))
+  )
+
+counts$evaluation.measures[[1]]
+```
+
+# TODO: How to make a Sankey with multiple labels?
+
+```{r}
+df_long <- df %>%
+  separate_rows(specified.role.of.visualization, sep = "\\r?\\n") %>%
+  separate_rows(evaluation.setting, sep = "\\r?\\n") %>%
+  separate_rows(evaluation.measures, sep = "\\r?\\n")
+```
+
+```{r}
+df_sankey <- df_long %>%
+  select(specified.audience, specified.role.of.visualization, evaluation.setting, evaluation.measures) %>%
+  filter(
+    !is.na(specified.audience),
+    !is.na(specified.role.of.visualization),
+    !is.na(evaluation.setting),
+    !is.na(evaluation.measures)
+  )
+```
+
+```{r}
+links_1 <- df_sankey %>%
+  transmute(
+    source = specified.audience,
+    target = specified.role.of.visualization
+  ) %>%
+  count(source, target, name = "value")
+
+links_2 <- df_sankey %>%
+  transmute(
+    source = specified.role.of.visualization,
+    target = evaluation.setting
+  ) %>%
+  count(source, target, name = "value")
+
+links_3 <- df_sankey %>%
+  transmute(
+    source = evaluation.setting,
+    target = evaluation.measures
+  ) %>%
+  count(source, target, name = "value")
+
+links <- bind_rows(links_1, links_2, links_3)
+
+# Build nodes
+nodes <- data.frame(
+  name = unique(c(links$source, links$target)),
+  stringsAsFactors = FALSE
+)
+
+# Assign each node to a stage
+audience_vals <- unique(df_sankey$specified.audience)
+role_vals     <- unique(df_sankey$specified.role.of.visualization)
+setting_vals  <- unique(df_sankey$evaluation.setting)
+measure_vals  <- unique(df_sankey$evaluation.measures)
+
+nodes <- nodes %>%
+  mutate(
+    stage = case_when(
+      name %in% audience_vals ~ "Audience",
+      name %in% role_vals ~ "Role",
+      name %in% setting_vals ~ "Setting",
+      name %in% measure_vals ~ "Measure",
+      TRUE ~ "Other"
+    )
+  )
+
+# Build links with source/target ids
+links_d3 <- links %>%
+  mutate(
+    source_id = match(source, nodes$name) - 1,
+    target_id = match(target, nodes$name) - 1,
+    link_group = case_when(
+      source %in% audience_vals ~ "Audience_to_Role",
+      source %in% role_vals ~ "Role_to_Setting",
+      source %in% setting_vals ~ "Setting_to_Measure",
+      TRUE ~ "Other"
+    )
+  )
+
+# One shared color scale for both nodes and links
+colour_scale <- JS(
+'d3.scaleOrdinal()
+  .domain([
+    "Audience", "Role", "Setting", "Measure",
+    "Audience_to_Role", "Role_to_Setting", "Setting_to_Measure", "Other"
+  ])
+  .range([
+    // --- NODE COLORS (dark, saturated) ---
+    "#3F2A84",  // Audience (deep purple)
+    "#2F5597",  // Role (deep blue)
+    "#007C91",  // Setting (teal / turquoise)
+    "#5B3F8C",  // Measure (muted purple variant)
+
+    // --- LINK COLORS (lighter versions) ---
+    "#9A8FD1",  // Audience → Role
+    "#7EA6E0",  // Role → Setting
+    "#5BC0BE",  // Setting → Measure
+    "#CCCCCC"   // Other
+  ])'
+)
+```
+
+```{r}
+nodes$name <- nodes$name %>%
+  gsub("In-the-wild/naturalistic public deployment", "In-the-wild public deployment", .) %>%
+  gsub("Controlled laboratory study", "Controlled lab study", .) %>%
+  gsub("Observation/ethnographic methods", "Observation/ethnography", .)
+
+p <- sankeyNetwork(
+  Links = links_d3,
+  Nodes = nodes,
+  Source = "source_id",
+  Target = "target_id",
+  Value = "value",
+  NodeID = "name",
+  NodeGroup = "stage",
+  LinkGroup = "link_group",
+  fontSize = 13,
+  nodeWidth = 36,
+  nodePadding = 18,
+  width = 1000,
+  height = 500,
+  colourScale = colour_scale
+)
+
+# Additional styling via JavaScript
+p <- onRender(p, '
+function(el, x) {
+  d3.select(el).selectAll(".node rect")
+    .style("stroke", "none");
+
+  d3.select(el).selectAll(".node text")
+    .style("font-family", "sans-serif")
+    .style("font-weight", "500");
+
+  var links = d3.select(el).selectAll(".link");
+
+  // default
+  links
+    .style("stroke-opacity", 0.35)
+    .style("stroke-width", function(d) { return Math.max(1, d.dy); });
+
+  // hover
+  links
+    .on("mouseover", function(event, d) {
+      d3.select(this)
+        .raise() // bring to front
+        .transition().duration(120)
+        .style("stroke-opacity", 0.9)
+        .style("stroke", "#ffffff")   // white line
+        .style("stroke-width", function(d) { return Math.max(2, d.dy + 1); });
+    })
+    .on("mouseout", function(event, d) {
+      d3.select(this)
+        .transition().duration(120)
+        .style("stroke-opacity", 0.35)
+        .style("stroke", null)        // revert to color scale
+        .style("stroke-width", function(d) { return Math.max(1, d.dy); });
+    });
+}
+')
+
+p
+```
+
+```{r}
+saveWidget(p, "../sankey.html", selfcontained = TRUE)
+```
+
