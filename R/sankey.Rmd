@@ -197,39 +197,14 @@ p <- sankeyNetwork(
 
 # Additional styling via JavaScript
 p <- onRender(p, '
-function(el, x) {
-  d3.select(el).selectAll(".node rect")
-    .style("stroke", "none");
-
-  d3.select(el).selectAll(".node text")
-    .style("font-family", "sans-serif")
-    .style("font-weight", "500");
-
-  var links = d3.select(el).selectAll(".link");
-
-  // default
-  links
-    .style("stroke-opacity", 0.35)
-    .style("stroke-width", function(d) { return Math.max(1, d.dy); });
-
-  // hover
-  links
-    .on("mouseover", function(event, d) {
-      d3.select(this)
-        .raise() // bring to front
-        .transition().duration(120)
-        .style("stroke-opacity", 0.9)
-        .style("stroke", "#ffffff")   // white line
-        .style("stroke-width", function(d) { return Math.max(2, d.dy + 1); });
-    })
-    .on("mouseout", function(event, d) {
-      d3.select(this)
-        .transition().duration(120)
-        .style("stroke-opacity", 0.35)
-        .style("stroke", null)        // revert to color scale
-        .style("stroke-width", function(d) { return Math.max(1, d.dy); });
-    });
-}
+  function(el, x) {
+    d3.select(el).selectAll(".node rect")
+      .style("stroke", "none");
+  
+    d3.select(el).selectAll(".node text")
+      .style("font-family", "sans-serif")
+      .style("font-weight", "500");
+  }
 ')
 
 p
