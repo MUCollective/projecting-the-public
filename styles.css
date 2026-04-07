@@ -175,7 +175,7 @@ a:hover {
 .image-row {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 10px;
   margin: 24px 0;
   flex-wrap: wrap; /* makes it responsive */
 }
@@ -214,6 +214,13 @@ h1 {
   color: var(--muted);
   max-width: 800px;
   font-size: 1.02rem;
+}
+
+.subsubtitle {
+  margin: auto;
+  color: var(--muted);
+  max-width: 800px;
+  font-size: 0.85rem;
 }
 
 .grid {
@@ -333,6 +340,11 @@ h2 {
   cursor: pointer;
   font-weight: 600;
   padding-inline: 16px;
+}
+
+.field .lighter-button {
+  background: var(--accent-soft);
+  color: #1e3a8a;
 }
 
 .field button:hover {
