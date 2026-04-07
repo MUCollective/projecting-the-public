@@ -1,0 +1,158 @@
+```{r}
+library(readr)
+library(dplyr)
+library(stringr)
+library(purrr)
+library(jsonlite)
+library(tibble)
+```
+
+```{r}
+# =========================
+# 1) File paths
+# =========================
+input_csv  <- "../paper_sampling/data/papers_coded.csv"
+output_json <- "../papers.json"
+```
+
+```{r}
+# =========================
+# 3) Helper functions
+# =========================
+
+na_if_blank <- function(x) {
+  x <- str_trim(as.character(x))
+  x[x == ""] <- NA_character_
+  x
+}
+
+clean_scalar <- function(x) {
+  x <- na_if_blank(x)
+  ifelse(is.na(x), NA_character_, x)
+}
+
+split_multi_value <- function(x) {
+  x <- clean_scalar(x)
+  if (is.na(x)) return(character(0))
+
+  # split on semicolons or line breaks (\n or \r\n)
+  parts <- str_split(x, "\\s*;\\s*|\\r?\\n+")[[1]]
+
+  parts %>%
+    str_squish() %>%
+    discard(~ .x == "")
+}
+
+normalize_values <- function(values, map) {
+  if (length(values) == 0) return(character(0))
+  out <- ifelse(values %in% names(map), unname(map[values]), values)
+  unique(out)
+}
+
+clean_doi <- function(x) {
+  x <- clean_scalar(x)
+  if (is.na(x)) return(NA_character_)
+
+  x <- str_remove(x, "^https?://(dx\\.)?doi\\.org/")
+  x <- str_remove(x, "^doi:\\s*")
+  str_trim(x)
+}
+
+maybe_doi_url <- function(doi) {
+  if (is.na(doi) || doi == "") return(NA_character_)
+  paste0("https://doi.org/", doi)
+}
+
+compact_record <- function(x) {
+  # remove NULLs but keep empty vectors if desired
+  x[!vapply(x, is.null, logical(1))]
+}
+```
+
+```{r}
+# =========================
+# 4) Read CSV
+# =========================
+
+df <- read_csv(
+  input_csv,
+  show_col_types = FALSE,
+  quote = "\""
+)
+```
+
+```{r}
+# =========================
+# 5) Convert rows
+# =========================
+
+records <- pmap(df, function(...) {
+  row <- list(...)
+
+  title    <- clean_scalar(row[["title"]])
+  venue    <- clean_scalar(row[["venue"]])
+  year_raw <- row[["year"]]
+  abstract <- clean_scalar(row[["abstract"]])
+
+  authors <- split_multi_value(row[["authors"]])
+
+  # Optional keywords column
+  keywords <- split_multi_value(row[["keywords"]])
+
+  specified_audience <- row[["specified audience"]] %>%
+    split_multi_value()
+    # normalize_values(normalize_cast_audience)
+
+  role <- row[["specified role of visualization"]] %>%
+    split_multi_value()
+    # normalize_values(normalize_role)
+
+  evaluation_environment <- row[["evaluation setting"]] %>%
+    split_multi_value()
+    # normalize_values(normalize_environment)
+
+  evaluation_measures <- row[["evaluation measures"]] %>%
+    split_multi_value()
+    # normalize_values(normalize_measures)
+
+  doi_clean <- clean_doi(row[["doi"]])
+  doi_url   <- maybe_doi_url(doi_clean)
+
+  year_num <- suppressWarnings(as.integer(year_raw))
+  if (is.na(year_num)) year_num <- NULL
+
+  record <- list(
+    title = if (!is.na(title)) unbox(title) else NULL,
+    authors = if (length(authors) > 0) authors else character(0),
+    year = unbox(year_num),
+    venue = if (!is.na(venue)) unbox(venue) else NULL,
+    doi = if (!is.na(doi_clean)) unbox(doi_clean) else NULL,
+    doi_url = if (!is.na(doi_url)) unbox(doi_url) else NULL,
+    abstract = if (!is.na(abstract)) unbox(abstract) else NULL,
+    specified_audience = specified_audience,
+    role = role,
+    evaluation_environment = evaluation_environment,
+    evaluation_measures = evaluation_measures
+    # Uncomment this if you want keywords as another grouped filter in the site:
+    # ,keywords = keywords
+  )
+
+  compact_record(record)
+})
+```
+
+```{r}
+# =========================
+# 6) Write JSON
+# =========================
+
+write_json(
+  records,
+  output_json,
+  pretty = TRUE,
+  auto_unbox = FALSE,
+  null = "null"
+)
+
+cat("Wrote JSON to:", output_json, "\n")
+```

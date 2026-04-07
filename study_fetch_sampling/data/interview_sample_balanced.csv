@@ -1,0 +1,207 @@
+Title,Year,Authors,Broad role of visualization,Broad role of visualization (specific),Visualization content,Target population,Target population (specific),Target deployment environment/technology,Target outcome,(Design process) Data collection – methodology,(Evaluation process) Data collection – setup,(Evaluation process) Data collection – setup (specific),(Evaluation process) Data collection – methodology,"Time-sensitive, critical component of visualization usage",(Design process) Data analysis,(Design process) Alignment,(Evaluation process) Alignment,Notes
+Chemicals in the Creek: Designing a Situated Data  Physicalization of Open Government Data with the Community,2021,"Laura J. Perovich, Sara Ann Wylie, Roseann Bongiovanni ","Communicative / Explanatory Medium
+Affective / Reflective Medium",,Data physicalizations of water violation data from the oil storage facilities on Chelsea Creek,"General Public / Everyday Audiences
+Specific Publics / Lived Communities",,"Public Display / Shared Physical Space
+Tangible / Physical-Computational Interfaces","Affect, Reflection, Attitude, or Belief Change
+Engagement & Participation",Participatory Design / Co-Design,In-the-Wild / Naturalistic / Public Deployment,,"Observation / Ethnographic Methods
+Content Analysis of Outputs
+Surveys / Questionnaires
+Interviews",No,Participatory action research – qualitative analysis,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Affective Congruence in Visualization Design:  Influences on Reading Categorical Maps,2022,Cary L. Anderson and Anthony C. Robinson,"Perceptual / Cognitive Object
+Affective / Reflective Medium",,Map visualizations with different color scales,General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,"Pattern Detection & Sensemaking
+Affect, Reflection, Attitude, or Belief Change","Literature-Derived
+Researcher-Constructed
+User Elicitation",Controlled Laboratory Study (remote or in-person),,Controlled Task Performance Measures,No,,,,
+Instructional Comics for Self-Paced Learning of Data Visualization Tools and Concepts,2025,"M. Boucher, M. AlKadi, B. Bach and W. Aigner","Communicative / Explanatory Medium
+Learning Tool",,Comics that explained network visualization tool,General Public / Everyday Audiences,,Static / Print-Like Media,Learning & Conceptual Understanding,"Domain Expert Elicitation
+User Elicitation",Simulated but Contextualized Scenario / Workflow,,"Surveys / Questionnaires
+Interviews
+Physiological / Behavioral Sensing",No,N/A,"Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N",
+Supporting the Contact Tracing Process with WiFi Location Data: Opportunities and Challenges,2022,"Kaely Hall, Dong Whi Yoo, Wenrui Zhang, Mehrab Bin Morshed, Vedant Das Swain, Gregory D. Abowd, Munmun De Choudhury, Alex Endert, John Stasko, and Jennifer G Kim",Analytic / Reasoning Tool,,Digital contact tracing tool and visualizations of symptom timeline and colocations with others,Specific Publics / Lived Communities,Contact tracers and community members),Interactive Desktop / Web Visualization,"Pattern Detection & Sensemaking
+Coordination & Collaboration",User Elicitation,"Simulated but Contextualized Scenario / Workflow
+Embedded Use in Real Workflows",Embedded Use in Real Workflows (almost),Interviews,Yes,N/A,"Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+What makes web data tables accessible? Insights and a tool for rendering accessible tables for people with visual impairments,2022,"Yanan Wang, Ruobing Wang, Crescentia Jung, and Yea-Seul Kim","Communicative / Explanatory Medium
+Analytic / Reasoning Tool",,HTML formatted tables transformed into accessible tables,Specific Publics / Lived Communities,BLV individuals,Interactive Desktop / Web Visualization,Communication & Narrative Uptake,User Elicitation,Simulated but Contextualized Scenario / Workflow,,"Guided or Free Exploration / Think-Aloud Protocols
+Interviews",No,Interview study – qualitative analysis,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Examining Limits of Small Multiples: Frame  Quantity Impacts Judgments With Line Graphs,2025,"Helia Hosseinpour, Laura E. Matzen, Kristin M. Divis, Spencer C. Castro, and Lace Padilla",Perceptual / Cognitive Object,,Small multiple charts,General Public / Everyday Audiences,,Physiological / Behavioral Sensing,"Perceptual Discrimination & Accuracy
+Pattern Detection & Sensemaking",Researcher-Constructed,Controlled Laboratory Study (remote or in-person),,"Surveys / Questionnaires
+Physiological / Behavioral Sensing",No,N/A,N/A,"Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A",
+Exploring How Visualization Design and Situatedness Evoke Compassion in the Wild,2022,"L. Morais, N. Andrade, and D. Sousa","Affective / Reflective Medium
+Engagement Medium",,"Data physicalizations of harrassment stories of women, exhibited in a public place, in addition to verbal descriptions and 2D visualizations ",General Public / Everyday Audiences,,"Public Display / Shared Physical Space
+Static / Print-Like Media
+Tangible / Physical-Computational Interfaces","Affect, Reflection, Attitude, or Belief Change
+Engagement & Participation",User Elicitation,In-the-Wild / Naturalistic / Public Deployment,,Surveys / Questionnaires,No,N/A,"Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Don’t Peek at My Chart: Privacy-preserving Visualization for Mobile Devices,2023,"Songheng Zhang, Dong Ma and Yong Wang",Perceptual / Cognitive Object,,"Visualizations of varying types (bar chart, pie chart, scatter plot, and line chart), with different mask areas and luminance contrasts",General Public / Everyday Audiences,,Mobile / Personal Device,Perceptual Discrimination & Accuracy,User Elicitation,Simulated but Contextualized Scenario / Workflow,,"Surveys / Questionnaires
+Interviews",No,Interview study – qualitative and quantitative analysis,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Public Data Visualization: Analyzing Local Running Statistics on Situated Displays,2021,J. Coenen & A. Vande Moere,Analytic / Reasoning Tool,,Visualizations of running times displayed on digital screens,General Public / Everyday Audiences,,"Public Display / Shared Physical Space
+Static / Print-Like Media","Pattern Detection & Sensemaking
+Engagement & Participation",Researcher-Constructed,In-the-Wild / Naturalistic / Public Deployment,,"Interaction Log / Trace Data
+Interviews",No,N/A,N/A,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Visualization Equilibrium,2022,"Paula Kayongo, Glenn Sun, Jason Hartline, and Jessica Hullman",Analytic / Reasoning Tool,,"Static bar charts, uncertainty visualizations",General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,Decision-Making & Judgment,Researcher-Constructed,Controlled Laboratory Study (remote or in-person),,"Controlled Task Performance Measures
+Surveys / Questionnaires",No,N/A,N/A,"Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – Y",
+"Classroom Dandelions: Visualising Participant Position, Trajectory and Body Orientation Augments Teachers’ Sensemaking",2022,"Gloria Milena Fernandez-Nieto, Pengcheng An, Jian Zhao, Simon Buckingham Shum, and Roberto Martinez-Maldonado",Analytic / Reasoning Tool,,Digitial indoor maps corresponding to critical classroom events using heatmaps and dandelion diagrams,Specific Publics / Lived Communities,Teachers and students,Interactive Desktop / Web Visualization,Pattern Detection & Sensemaking,Researcher-Constructed,Simulated but Contextualized Scenario / Workflow,,"Guided or Free Exploration / Think-Aloud Protocols
+Interviews",No,N/A,N/A,"Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N",
+Modeling and Measuring the Chart Communication Recall Process,2025,"A. Arunkumar, L. Padilla, and C. Bryan",Perceptual / Cognitive Object,,100 static visualizations encompassing diverse annotation styles and elements,General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,"Pattern Detection & Sensemaking
+Communication & Narrative Uptake",Literature-Derived,Controlled Laboratory Study (remote or in-person),,"Surveys / Questionnaires
+Interviews",No,N/A,N/A,"Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A",Has some efforts towards realism (using real-world visualizations) but is trying to strip away/control the setting of visualization viewing
+News Globe: Visualization of Geolocalized News Articles,2021,"Nicholas Ingulfsen, Simone Schaub-Meyer, Markus Gross, Tobias Gunther",Analytic / Reasoning Tool,,Interactive globe visualization of news articles,General Public / Everyday Audiences,,Interactive Desktop / Web Visualization,Pattern Detection & Sensemaking,Researcher-Constructed,Simulated but Contextualized Scenario / Workflow,,Guided or Free Exploration / Think-Aloud Protocols,No,,,,
+User Experience of Visualizations in Motion: A Case Study and Design Considerations,2025,"Lijie Yao, Federica Bucchieri, Victoria McArthur, Anastasia Bezerianos, and Petra Isenberg",Analytic / Reasoning Tool,,Video game with visualizations in motion,General Public / Everyday Audiences,Video game players,Interactive Desktop / Web Visualization,"Engagement & Participation
+Decision-Making & Judgment",Literature-Derived,Simulated but Contextualized Scenario / Workflow,,"Surveys / Questionnaires
+Interviews",No,Systematic review and design space exploration – qualitative analysis,"Target population – N/A
+Target environment/technology – Y
+Target interaction/behavior/insight – Y","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Outcome-Explorer: A Causality Guided Interactive Visual Interface for Interpretable Algorithmic Decision Making,2022,Md Naimul Hoque and Klaus Mueller,Analytic / Reasoning Tool,,Web interface to aid in understanding of causal DAGs and predictive models,General Public / Everyday Audiences,,Interactive Desktop / Web Visualization,Learning & Conceptual Understanding,User Elicitation,Simulated but Contextualized Scenario / Workflow,,"Guided or Free Exploration / Think-Aloud Protocols
+Interviews
+Surveys / Questionnaires",No,N/A,"Target population – N
+Target environment/technology – N
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Diverse Interaction Recommendation for Public Users Exploring Multi-view Visualization using Deep Learning,2023,"Yixuan Li, Yusheng Qi,Yang Shi, Qing Chen, Nan Cao, Siming Chen",Analytic / Reasoning Tool,,Visualizations of spatio-temporal trajectory data of when and where a literati was created by poets and the content,General Public / Everyday Audiences,,Interactive Desktop / Web Visualization,"Pattern Detection & Sensemaking
+Engagement & Participation","Domain Expert Elicitation
+User Elicitation",Simulated but Contextualized Scenario / Workflow,,"Observation / Ethnographic Methods
+Surveys / Questionnaires
+Interviews",No,N/A,"Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N",
+The Curse of Knowledge in Visual  Data Communication,2020,"Cindy Xiong, Lisanne van Weelden, and Steven Franconeri",Perceptual / Cognitive Object,,Line charts and bar charts,General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,Pattern Detection & Sensemaking,Researcher-Constructed,Controlled Laboratory Study (remote or in-person),,"Content Analysis of Outputs
+Controlled Task Performance Measures",No,,,,
+Effectiveness of Area-to-Value Legends and Grid  Lines in Contiguous Area Cartograms,2024,"Kelvin L. T. Fung, Simon T. Perrault, and Michael T. Gastner",Perceptual / Cognitive Object,,Cartograms of 28 randomly chosen countries,General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,Perceptual Discrimination & Accuracy,Researcher-Constructed,Controlled Laboratory Study (remote or in-person),,"Controlled Task Performance Measures
+Surveys / Questionnaires",No,N/A,N/A,"Target population – N
+Target environment/technology – N
+Target interaction/behavior/insight – N",
+Polarizing Political Polls: How Visualization Design Choices Can Shape Public Opinion and Increase Political Polarization,2024,Eli Holder and Cindy Xiong Bearfield,Affective / Reflective Medium,,Public polling visualizations,General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,"Affect, Reflection, Attitude, or Belief Change",Researcher-Constructed,Controlled Laboratory Study (remote or in-person),,Surveys / Questionnaires,No,N/A,N/A,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+"The Arrangement of Marks Impacts Afforded Messages: Ordering, Partitioning, Spacing, and Coloring in Bar Charts",2024,"Racquel Fygenson, Steven Franconeri, and Enrico Bertini","Communicative / Explanatory Medium
+Analytic / Reasoning Tool",Analytic / Reasoning Tool (ambiguous),"Bar charts of various orderings, partitions, spacings, and color groupings",General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,"Pattern Detection & Sensemaking
+Communication & Narrative Uptake","Literature-Derived
+Researcher-Constructed",Controlled Laboratory Study (remote or in-person),,Surveys / Questionnaires,No,N/A,N/A,"Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A",
+From shock to shift: Data visualization for constructive climate journalism,2024,"Francesca Morini, Anna Eschenbacher, Johanna Hartmann, and Marian Dörk",Affective / Reflective Medium,,Individual data-driven postcards on climate protection in Germany,General Public / Everyday Audiences,,"Static / Print-Like Media
+Interactive Desktop / Web Visualization","Affect, Reflection, Attitude, or Belief Change",Participatory Design / Co-Design,In-the-Wild / Naturalistic / Public Deployment,,Surveys / Questionnaires,No,N/A,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+How Do Viewers Synthesize Conflicting Information from Data Visualizations?,2023,"Prateek Mantri, Hariharan Subramonyam, Audrey L. Michal, and Cindy Xiong","Communicative / Explanatory Medium
+Analytic / Reasoning Tool",,Line charts with varying slope and intercepts,General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,"Pattern Detection & Sensemaking
+Communication & Narrative Uptake",Researcher-Constructed,Controlled Laboratory Study (remote or in-person),,"Controlled Task Performance Measures
+Surveys / Questionnaires",No,N/A,N/A,"Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A",
+Humane Visual AI: Telling the Stories Behind a Medical Condition,2021,"Wonyoung So, Edyta P. Bogucka, Sanja Scepanovic, Sagar Joglekar, Ke Zhou, Daniele Quercia","Communicative / Explanatory Medium
+Affective / Reflective Medium",Affective / Reflective Medium (maybe),Layered Martini Glass visualization of aspects of medical conditions,General Public / Everyday Audiences,,Interactive Desktop / Web Visualization,Learning & Conceptual Understanding,Domain Expert Elicitation,Simulated but Contextualized Scenario / Workflow,,Surveys / Questionnaires,No,N/A,"Target population – N
+Target environment/technology – Y
+Target interaction/behavior/insight – Y","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Juvenile Graphical Perception: A Comparison between Children and Adults,2022,"Liudas Panavas, Amy Worth, Tarik Crnovrsanin, Tejas Sathyamurthi, Sara Cordes, Michelle A. Borkin, and Cody Dunne",Perceptual / Cognitive Object,,Stimuli from Cleveland & McGill (1986); tested judgements for visual encodings (1) Position Along a Common Axis (2) Position Along an Unaligned Axis (3) Length (4) Angle (5) Area,General Public / Everyday Audiences,Childrens and adults,Experimental / Prototype-Only Environment,Perceptual Discrimination & Accuracy,"Literature-Derived
+Researcher-Constructed",Controlled Laboratory Study (remote or in-person),,Surveys / Questionnaires,No,N/A,N/A,"Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A","Don't include? Perception studies aren't necessarily trying to maximize realism ... but it is still an interesting tension they face
+
+""The stimuli chosen are rarely seen in such a simple format “in the wild.” What they do represent are the basic encodings and building blocks for many types of visualizations. Our goal is to empirically test these encodings and enable other researchers and designers to determine how the encodings come together to create various visualizations."""
+Sea of Genes: A Reflection on Visualising Metagenomic Data for Museums,2021,"Keshav Dasu, Kwan-Liu Ma, Joyce Ma, Jennifer Frazier",Communicative / Explanatory Medium,,Multi-user interactive visualization exhibit using animation and narrative elements,General Public / Everyday Audiences,,"Public Display / Shared Physical Space
+Interactive Desktop / Web Visualization",Learning & Conceptual Understanding,"Participatory Design / Co-Design
+Domain Expert Elicitation
+User Elicitation",In-the-Wild / Naturalistic / Public Deployment,,Interviews,No,->,->,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+Investigating Visual Analysis of Differentially Private Data,2021,"Dan Zhang, Ali Sarvghad, and Gerome Miklau",Perceptual / Cognitive Object,,"Bar charts, pie charts, line charts, scatter plots",General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,"Perceptual Discrimination & Accuracy
+Pattern Detection & Sensemaking",Researcher-Constructed,Controlled Laboratory Study (remote or in-person),,"Controlled Task Performance Measures
+Surveys / Questionnaires",No,N/A,N/A,"Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A",
+Data Clothing and BigBarChart: Designing Physical Data Reports on Indoor Pollutants for Individuals and Communities,2021,"Laura J. Perovich, Phoebe Cai, Amber Guo, Kristin Zimmerman, Katherine Paseman, Dayanna Espinoza Silva, Julia G. Brody","Communicative / Explanatory Medium
+Engagement Medium",,Data physicalizations – interactive bar chart and clothing,General Public / Everyday Audiences,,"Tangible / Physical-Computational Interfaces
+Public Display / Shared Physical Space",Engagement & Participation,"Researcher-Constructed
+User Elicitation",In-the-Wild / Naturalistic / Public Deployment,,"Interviews
+Observation / Ethnographic Methods",No,,,,
+Exploring the Effects of Aggregation Choices on Untrained Visualization Users’ Generalizations From Data,2020,"F. Nguyen, X. Qiao, J. Heer and J. Hullman",Perceptual / Cognitive Object,,"15 trials that each showed a stimuli varying in data-type combination and aggregation strategy, visualized wth default visualizations in common softwares (Tableau, PowerBI, Spotfire, Voyager)",General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,Pattern Detection & Sensemaking,User Elicitation,Controlled Laboratory Study (remote or in-person),,Surveys / Questionnaires,No,Small exploratory study (to chose data-type combinations) – qualitative analysis,"Target population – N
+Target environment/technology – Y
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A",
+Move&Find: The Value of Kinaesthetic Experience in a Casual Data Representation,2020,"Jorn Hurtienne, Franzisca Maas, Astrid Carolus, Daniel Reinhardt, Cordula Baur, and Carolin Wienrich",Learning Tool,,Multisensory data representation in which people pedalled on a bicycle to exert the energy required to power a search query on Google’s  servers,General Public / Everyday Audiences,,Tangible / Physical-Computational Interfaces,"Learning & Conceptual Understanding
+Affect, Reflection, Attitude, or Belief Change
+Engagement & Participation",Researcher-Constructed,Simulated but Contextualized Scenario / Workflow,,"Observation / Ethnographic Methods
+Surveys / Questionnaires
+Interviews",No,,,,
+Towards Visualization Thumbnail Designs That  Entice Reading Data-Driven Articles,2024,"Hwiyeon Kim, Joohee Kim, Yunha Han, Hwajung Hong, Oh-Sang Kwon, Young-Woo Park, Niklas Elmqvist, Sungahn Ko, and Bum Chul Kwon",Communicative / Explanatory Medium,,Webpage showing news articles with thumbnails,General Public / Everyday Audiences,,Interactive Desktop / Web Visualization,"Pattern Detection & Sensemaking
+Engagement & Participation",Domain Expert Elicitation,Simulated but Contextualized Scenario / Workflow,,Surveys / Questionnaires,No,N/A,"Target population – N
+Target environment/technology – N
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
+PixelClipper: Supporting Public Engagement and Conversation About Visualizations,2020,"Jagoda Walny, Sarah Storteboom, Richard Pusch, Steven Munsu Hwang, Søren Knudsen, Sheelagh Carpendale, Wesley Willett","Communicative / Explanatory Medium
+Engagement Medium",,Public interface allowing viewers to add comments to visualizations,General Public / Everyday Audiences,,"Tangible / Physical-Computational Interfaces
+Public Display / Shared Physical Space","Engagement & Participation
+Coordination & Collaboration","Researcher-Constructed
+Domain Expert Elicitation",In-the-Wild / Naturalistic / Public Deployment,,Observation / Ethnographic Methods,No,,,,
+Professional Differences: A Comparative Study of Visualization Task Performance and Spatial Ability Across Disciplines,2022,"Kyle Wm. Hall, Anthony Kouroupis, Anastasia Bezerianos, Danielle Albers Szafir, and Christopher Collins",Perceptual / Cognitive Object,,Pie charts and scatterplots,General Public / Everyday Audiences,,Experimental / Prototype-Only Environment,Perceptual Discrimination & Accuracy,"Literature-Derived
+Researcher-Constructed",Controlled Laboratory Study (remote or in-person),,"Controlled Task Performance Measures
+Surveys / Questionnaires",No,N/A,N/A,"Target population – Y
+Target environment/technology – N/A
+Target interaction/behavior/insight – N/A",
+The Backstory to “Swaying the Public”: A Design Chronicle of Election Forecast Visualizations,2025,"Fumeng Yang, Mandi Cai, Chloe Mortenson, Hoda Fakhari, Ayse D. Lokmanoglu, Nicholas Diakopoulos, Erik C. Nisbet, Matthew Kay","Communicative / Explanatory Medium
+Affective / Reflective Medium",,Election forecast visualizations and text representations,General Public / Everyday Audiences,,Interactive Desktop / Web Visualization,"Affect, Reflection, Attitude, or Belief Change",User Elicitation,Simulated but Contextualized Scenario / Workflow,Simulated but Contextualized Scenario / Workflow (viewed during interview),"Guided or Free Exploration / Think-Aloud Protocols
+Interviews",Yes,"  
+ 	
+Survey study – qualitative analysis","Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N","Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N",
+Embellishments Revisited: Perceptions of Embellished Visualisations Through the Viewer’s Lens,2024,"Muna Alebri, Enrico Costanza, Georgia Panagiotidou, and Duncan P. Brumby",Communicative / Explanatory Medium,,Visualizations with embellishments,General Public / Everyday Audiences,,"Static / Print-Like Media
+Interactive Desktop / Web Visualization",Engagement & Participation,"Literature-Derived
+User Elicitation",Controlled Laboratory Study (remote or in-person),,Surveys / Questionnaires,No,Survey study – quantitative analysis,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y","Target population – Y
+Target environment/technology – N
+Target interaction/behavior/insight – N",
+Annotating Line Charts for Addressing Deception,2022,"Arlen Fan, Yuxin Ma, Michelle Mancenido, and Ross Maciejewski","Communicative / Explanatory Medium
+Analytic / Reasoning Tool",,Line charts with textual and graphical annotations of deceptive elements,General Public / Everyday Audiences,,Interactive Desktop / Web Visualization,"Pattern Detection & Sensemaking
+Communication & Narrative Uptake","Literature-Derived
+Researcher-Constructed",Simulated but Contextualized Scenario / Workflow,,Surveys / Questionnaires,No,N/A,N/A,"Target population – Y
+Target environment/technology – Y
+Target interaction/behavior/insight – Y",
