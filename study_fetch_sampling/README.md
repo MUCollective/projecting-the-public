@@ -1,0 +1,2 @@
+- List of 73 publications and associated codes: `data/papers_coded.csv`
+- Full list of key words for inclusion and exclusion: `scripts/scripts_config.py` (inclusion keywords: `TOPIC_KEYWORDS`, `AUDIENCE_KEYWORDS`, `VISUALIZATION_KEYWORDS`; exclusion keywords: `EXCLUDE_KEYWORDS`)
